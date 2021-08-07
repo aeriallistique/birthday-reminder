@@ -11,6 +11,8 @@ const arrangePeople = ()=>{
 		peep.timeUntilBirthday();
 		arrayOfDays.push(peep);	
 	})
+	
+	// it arranges the people in the array from the nearest b-day first to just passed b-day as last.
 	return arrayOfDays.filter(e => e.index >= 0)
 	.sort((a, b)=> a.index-b.index)
 	.concat(arrayOfDays.filter(e=> e.index<0)
